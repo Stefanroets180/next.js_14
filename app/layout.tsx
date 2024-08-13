@@ -13,9 +13,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+    profile
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode,
+    profile: React.ReactNode
 }>) {
+    const isAdmin = false; //true for privileges
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -28,6 +31,7 @@ export default function RootLayout({
         </ul>
       </nav>
       {children}
+      {isAdmin && profile}
       </body>
     </html>
   );
