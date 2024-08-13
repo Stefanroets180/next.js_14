@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export default async function Home() {
-    const data = await fetch ("https://jsonplaceholder.typicode")
+    const data =  await fetch ("https://localhost.typicode/")
     const todo = await data.json()
     console.log(todo)
   return (
